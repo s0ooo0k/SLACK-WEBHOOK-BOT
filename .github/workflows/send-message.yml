@@ -1,0 +1,30 @@
+name: send message
+
+on:
+    workflow_dispatch:
+
+jobs:
+  send-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Compile and Run Bot
+        run: |
+          javac Webhook.java
+          java Webhook
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          LLM2_API_MODEL: ${{vars.LLM2_API_MODEL}}
+          LLM2_API_URL: ${{secrets.LLM2_API_URL}}
+          LLM2_API_KEY : ${{secrets.LLM2_API_URL}}
+          LLM2_IMG_TEMPLATE: ${{vars.LLM2_IMG_TEMPLATE}}
+          LLM_API_KEY: ${{secrets.LLM_API_URL}}
+          LLM_API_URL: ${{secrets.LLM_URL}}
