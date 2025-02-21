@@ -22,12 +22,17 @@ _"오늘도 코드에 치여 사는 AIBE 동료들에게..." _
 ---
 
 ## 🎯 주요 기능  
-✅ **랜덤 개발자 유머 및 짤 제공** → `JOKES`와 `IMGS` 환경변수에 저장된 유머 중 랜덤 전송 🃏  
-✅ **AI가 생성한 개발 팁과 이미지** → 시니어가 들려주는 개발 팁과 동물 개발자 이미지를 AI가 생 🎨  
+✅ **랜덤 개발자 유머 및 짤 제공** → `JOKES`와 `IMGS` 환경변수에 저장된 유머 중 랜덤 전송 🃏   
+![Image](https://github.com/user-attachments/assets/769160a3-f010-4190-ad5f-bfa82bdbd424)
+
+✅ **AI가 생성한 개발 팁과 이미지** → 시니어가 들려주는 개발 팁과 동물 개발자 이미지를 AI가 생성 🎨  
+![Image](https://github.com/user-attachments/assets/c94d097c-e16f-47f7-a7f1-642c133eb0e5)
+
 ✅ **코딩할 때 들을 음악 추천** → `MUSICS` 환경변수에 저장된 플레이리스트 중 랜덤 추천 🎵  
+![Image](https://github.com/user-attachments/assets/eba7f05a-dbd8-4d62-8248-dfa21a6d79aa)
+
 ✅ **Slack Webhook을 통해 자동 전송** → Slack에서 바로 확인 가능 💬  
 
----
 
 ## 📦 환경 변수 설정  
 이 프로그램을 실행하려면 다음과 같은 환경 변수를 설정해야 합니다.  
