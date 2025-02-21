@@ -174,28 +174,23 @@ public class Webhook {
         }
     }
 
-    public static void sendMsg(String tip, String llmImgUrl, String text) {
+    public static void sendMsg(String tip, String llmImgUrl, String text, String imgUrl) {
         // String slackUrl = "https://hooks.slack.com/services/";
         String slackUrl = System.getenv("SLACK_WEBHOOK_URL");
         String jsonPayload = String.format("""
         {
            "attachments":[
-              {
-                 "fallback":"",
-                 "pretext":"☕ 오늘의 개발 팁 📲 \\n\\n %s \\n\\n",
-                 "color":"#D00000",
-                 "image_url":"%s",
-                 "fields":[
-                    {
-                       "title":"😄 아이고 배야, 깔깔 유-머 🤖 ️",
-                       "value":"%s",
-                       "short":false
-                    }
-                 ]
-              },
-           ]
+                                           {
+                                               "text": "☕ 오늘의 개발 팁 📲 \\n %s \\n",
+                                               "image_url": "%s"
+                                           },
+                                           {
+                                               "text": "😄 아이고 배야, 깔깔 유-머 🤖\\n %s \\n",
+                                               "image_url": "%s"
+                                           }
+                                       ]
         }
-        """, tip, llmImgUrl, text);
+        """, tip, llmImgUrl, text, imgUrl);
 
         // 브라우저나 유저인 척하는 것
         HttpClient client = HttpClient.newHttpClient();
