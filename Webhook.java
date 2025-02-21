@@ -10,7 +10,7 @@ import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Solution02 {
+public class Webhook {
     public static void main(String[] args) {
         String prompt = "너는 시니어 개발자야. 주니어 개발자들에게 전하는 개발 팁을 100글자 이내로 작성해줘. 개발자 팁이라는 제목도 없어도 되고, 앞 뒤 내용 없이 팁만 100글자 이내의 자연스러운 한글 평문으로 작성해줘. 100글자 이내야 꼭. 한자나 일본어 등 한글이 아닌 문자는 꼭 제외해줘, 명심해.  *같은 마크다운이나 강조 문법은 모두 생략해줘";
         String llmTip = useLLM(prompt);
